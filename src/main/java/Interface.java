@@ -81,13 +81,13 @@ public class Interface {
 
         double Net = gross_pay - socSec - fedTax - stTax - union - insurance;
 
-        System.out.printf("  SocSec: ", socSec);
-        System.out.printf("  FedTax: ", fedTax);
-        System.out.printf("   StTax: ", stTax);
-        System.out.printf("   Union: ", union);
-        System.out.printf("     Ins: ", insurance);
+        System.out.println("  SocSec: " +socSec);
+        System.out.println("  FedTax: " + fedTax);
+        System.out.println("   StTax: " + stTax);
+        System.out.println("   Union: " + union);
+        System.out.println("     Ins: " + insurance);
 
-        System.out.printf("     Net: ", Net);
+        System.out.println("     Net: " + Net);
 
         System.out.println("Thank you for using the Payroll Program!");
 
