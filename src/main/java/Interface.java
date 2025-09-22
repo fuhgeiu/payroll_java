@@ -71,16 +71,25 @@ public class Interface {
             System.out.println(" Gross pay: " + gross_pay);
         }
 
-        else  System.out.println(" Gross pay: " + hours_worked*base_pay + "\n\n");
+        else  {gross_pay = hours_worked*base_pay; System.out.println(" Gross pay: " + gross_pay + "\n\n");}
 
-        
+        double socSec = gross_pay * 0.06;
+        double fedTax = gross_pay * 0.14;
+        double stTax = gross_pay * 0.05;
+        double union = 10;
+        double insurance = (user_data.get_dependents() >= 3) ? 35 : 15;
 
+        double Net = gross_pay - socSec - fedTax - stTax - union - insurance;
 
+        System.out.printf("  SocSec: ", socSec);
+        System.out.printf("  FedTax: ", fedTax);
+        System.out.printf("   StTax: ", stTax);
+        System.out.printf("   Union: ", union);
+        System.out.printf("     Ins: ", insurance);
 
+        System.out.printf("     Net: ", Net);
 
-        System.out.println(" Dependents: " + user_data.get_dependents());
-
-
+        System.out.println("Thank you for using the Payroll Program!");
 
         /*
             expenses
